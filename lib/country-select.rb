@@ -18,7 +18,7 @@ module ActionView
           if (unlisted = priority_countries - COUNTRIES).any?
             raise RuntimeError.new("Supplied priority countries are not in the main list: #{unlisted}")
           end
-          country_options += options_for_select(priority_countries, selected)
+          country_options += options_for_select(translated_countries(priority_countries).zip(priority_countries), selected)
           country_options += "<option value=\"\" disabled=\"disabled\">-------------</option>\n"
 
           # prevents selected from being included twice in the HTML which causes
@@ -29,7 +29,11 @@ module ActionView
 
         country_options = country_options.html_safe if country_options.respond_to?(:html_safe)
 
-        return country_options + options_for_select(COUNTRIES, selected)
+        return country_options + options_for_select(translated_countries(COUNTRIES).zip(COUNTRIES), selected)
+      end
+
+      def translated_countries(countries)
+        countries.map { |country| I18n.translate(country) }
       end
 
       # All the countries included in the country_options output.
