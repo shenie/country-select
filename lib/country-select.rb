@@ -44,7 +44,7 @@ module ActionView
         "British Indian Ocean Territory", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia",
         "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Chad", "Chile", "China",
         "Christmas Island", "Cocos (Keeling) Islands", "Colombia", "Comoros", 
-        "Congo, the Democratic Republic of the", "Cook Islands", "Costa Rica", "Croatia", 
+        "Cook Islands", "Costa Rica", "Croatia", 
         "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt",
         "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands (Malvinas)",
         "Faroe Islands", "Fiji", "Finland", "France", "French Guiana", "French Polynesia",
