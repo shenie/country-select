@@ -33,7 +33,7 @@ module ActionView
       end
 
       def translated_countries(countries)
-        countries.map { |country| I18n.translate(country) }
+        countries.map { |country| I18n.translate(country) }.sort_alphabetical
       end
 
       # All the countries included in the country_options output.
