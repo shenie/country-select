@@ -2,6 +2,7 @@
 module ActionView
   module Helpers
     module FormOptionsHelper
+      require 'sort_alphabetical'
       # Return select and option tags for the given object and method, using country_options_for_select to generate the list of option tags.
       def country_select(object, method, priority_countries = nil, options = {}, html_options = {})
         InstanceTag.new(object, method, self, options.delete(:object)).to_country_select_tag(priority_countries, options, html_options)
@@ -33,7 +34,7 @@ module ActionView
       end
 
       def translated_countries(countries)
-        countries.map { |country| I18n.translate(country) }
+        countries.map { |country| I18n.translate(country) }.sort_alphabetical
       end
 
       # All the countries included in the country_options output.

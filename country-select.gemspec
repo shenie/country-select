@@ -10,4 +10,5 @@ Gem::Specification.new do |s|
  											'README.md',
 											'MIT-LICENSE'	]
 	s.homepage			= 'http://github.com/jamesds/country-select'
+	s.add_runtime_dependency 'sort_alphabetical'
 end
